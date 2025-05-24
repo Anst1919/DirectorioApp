@@ -1,0 +1,33 @@
+/* Light background for the entire page */
+body {
+  background-color: #fafdb7;
+}
+
+/* Soft style for cards with rounded edges and animation */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Slightly raises the card when hovering over it and adds a soft shadow. */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Defines the height of the image and adjusts it correctly */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Dark color for card titles */
+.card-title {
+  color: #060216;
+}
+
+/* Clear and professional font for headings */
+h1, h5 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
