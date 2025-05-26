@@ -19,7 +19,7 @@ body {
 /* Defines the height of the image and adjusts it correctly */
 .card-img-top {
   height: 180px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Dark color for card titles */
@@ -30,4 +30,31 @@ body {
 /* Clear and professional font for headings */
 h1, h5 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Media Queries:
+ These are used to adapt the design to the screen size:
+  - On mobile devices, one card will be displayed per row for better readability. 
+  - On large screens, three cards will be displayed per row. 
+  The alignment and size of the text are also adjusted, 
+  and the last card is centered if it is left alone, 
+  so everything looks organized and easy to use. */
+@media (max-width: 768px) {
+  .card {
+    margin: 0 auto;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title,
+  .card-text {
+    text-align: center;
+  }
+
+  ul.list-group {
+    text-align: left;
+    font-size: 0.9rem;
+  }
 }

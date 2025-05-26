@@ -27,19 +27,16 @@ const consumirApi = () => {
       // We process each user to create their information card
       data.forEach((personita, index) => {
         contenedor.innerHTML += `
-          <div class="col-md-6 mb-4">
-            <div class="card flex-row">
-              <img src="${imagenes[index]}" 
-                   class="card-img-left" 
-                   style="width: 150px; height: 150px; object-fit: contain; border-radius: 8px;" 
-                   alt="usuario${index + 1}">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card text-center">
+              <img src="${imagenes[index]}" class="card-img-top" alt="usuario${index + 1}">
               <div class="card-body">
                 <h5 class="card-title">${personita.name}</h5>
                 <p class="card-text">Información de contacto</p>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">Nombre de usuario: ${personita.username}</li>
                   <li class="list-group-item">Correo electrónico: ${personita.email}</li>
-                  <li class="list-group-item">Número telefónico: ${personita.phone}</li>
+                  <li class="list-group-item">Teléfono: ${personita.phone}</li>
                   <li class="list-group-item">Sitio web: ${personita.website}</li>
                   <li class="list-group-item">Calle: ${personita.address.street}</li>
                   <li class="list-group-item">Habitación: ${personita.address.suite}</li>
